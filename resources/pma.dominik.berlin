@@ -1,0 +1,19 @@
+<VirtualHost *:80>
+	ServerName pma.dominik.berlin
+	Redirect permanent / https://pma.dominik.berlin
+</VirtualHost>
+
+<IfModule mod_ssl.c>
+
+<VirtualHost *:443>
+	ServerName pma.dominik.berlin
+	ServerAlias pma.dominik.berlin
+	DocumentRoot "/usr/share/phpmyadmin"
+	LogLevel warn
+	SSLEngine On
+	SSLCipherSuite HIGH:MEDIUM
+	SSLCertificateFile /etc/ssl/certs/ssl-cert-snakeoil.pem
+	SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key	
+</VirtualHost>
+
+</IfModule>

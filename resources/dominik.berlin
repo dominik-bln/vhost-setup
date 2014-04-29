@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+	ServerAdmin admin@dominik.berlin
+	ServerAlias 91.250.96.174
+	DocumentRoot /var/www/dominik.berlin
+	ServerName dominik.berlin
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride All
+		Order deny,allow
+	</Directory>
+</VirtualHost>

@@ -1,0 +1,4 @@
+<VirtualHost *:80>
+	ServerName talesofjade.de
+	Redirect permanent / https://facebook.com/talesofjade
+</VirtualHost>
